@@ -1,0 +1,366 @@
+═══════════════════════════════════════════════════════════════════
+  FORMULES DAX COMPLÈTES - DASHBOARD CA vs RENTABILITÉ
+  Projet : Ngroup Media & Digital
+  Auteur : Boubacar Nikiema
+  Date : Février 2025
+═══════════════════════════════════════════════════════════════════
+
+📊 9 MESURES DAX TOTALES
+- 7 KPIs Principaux
+- 2 Alertes Conditionnelles
+
+═══════════════════════════════════════════════════════════════════
+SECTION 1 : KPIs PRINCIPAUX (7 MESURES)
+═══════════════════════════════════════════════════════════════════
+
+-------------------------------------------------------------------
+MESURE 1 : CA_Total
+-------------------------------------------------------------------
+OBJECTIF : Calculer le chiffre d'affaires total (somme des ventes HT)
+
+FORMULE :
+CA_Total = SUM(Ventes[Montant_HT])
+
+EXPLICATION :
+- SUM() : Fonction d'agrégation qui additionne
+- Ventes[Montant_HT] : Colonne montants HT de la table Ventes
+- Résultat : 2 079 000 DH sur 24 mois
+
+FORMAT RECOMMANDÉ : Nombre entier avec séparateur milliers
+EXEMPLE AFFICHAGE : 2 079 000 DH
+
+-------------------------------------------------------------------
+MESURE 2 : Coûts_Variables
+-------------------------------------------------------------------
+OBJECTIF : Calculer la somme des dépenses de type "Variable"
+
+FORMULE :
+Coûts_Variables = 
+CALCULATE(
+    SUM(Depenses[Montant]),
+    Depenses[Type_Cout] = "Variable"
+)
+
+EXPLICATION :
+- CALCULATE() : Modifie le contexte de filtre
+- SUM(Depenses[Montant]) : Somme des montants dépenses
+- Depenses[Type_Cout] = "Variable" : Filtre sur type Variable
+- Résultat : 109 000 DH sur 24 mois
+
+CAS D'USAGE :
+Coûts qui varient selon l'activité :
+- Marketing
+- Matériel
+- Freelances
+- Fournitures
+
+FORMAT RECOMMANDÉ : Nombre entier
+EXEMPLE AFFICHAGE : 109 000 DH
+
+-------------------------------------------------------------------
+MESURE 3 : Coûts_Fixes
+-------------------------------------------------------------------
+OBJECTIF : Calculer la somme des dépenses de type "Fixe"
+
+FORMULE :
+Coûts_Fixes = 
+CALCULATE(
+    SUM(Depenses[Montant]),
+    Depenses[Type_Cout] = "Fixe"
+)
+
+EXPLICATION :
+- Même logique que Coûts_Variables
+- Filtre sur "Fixe" au lieu de "Variable"
+- Résultat : 379 200 DH sur 24 mois
+
+CAS D'USAGE :
+Coûts qui tombent chaque mois :
+- Loyer : 3 000 DH/mois
+- Salaires : 12 000 DH/mois
+- Assurance : 800 DH/mois
+Total fixe : 15 800 DH/mois
+
+FORMAT RECOMMANDÉ : Nombre entier
+EXEMPLE AFFICHAGE : 379 200 DH
+
+-------------------------------------------------------------------
+MESURE 4 : Marge_Brute
+-------------------------------------------------------------------
+OBJECTIF : Calculer la marge après déduction des coûts variables
+
+FORMULE :
+Marge_Brute = [CA_Total] - [Coûts_Variables]
+
+EXPLICATION :
+- Référence les mesures précédentes (pas les colonnes)
+- CA Total : 2 079 000 DH
+- Coûts Variables : -109 000 DH
+- Résultat : 1 970 000 DH
+
+INTERPRÉTATION BUSINESS :
+La marge brute représente ce qui reste après avoir payé
+les coûts directement liés à la production/vente.
+
+FORMAT RECOMMANDÉ : Nombre entier
+EXEMPLE AFFICHAGE : 1 970 000 DH
+
+-------------------------------------------------------------------
+MESURE 5 : Marge_Brute_%
+-------------------------------------------------------------------
+OBJECTIF : Calculer le % de marge brute par rapport au CA
+
+FORMULE :
+Marge_Brute_% = DIVIDE([Marge_Brute], [CA_Total], 0)
+
+EXPLICATION :
+- DIVIDE() : Division sécurisée (évite erreur si dénominateur = 0)
+- [Marge_Brute] / [CA_Total]
+- 0 : Valeur par défaut si division impossible
+- Résultat : 94.8%
+
+INTERPRÉTATION BUSINESS :
+94.8% du CA reste après paiement des coûts variables.
+EXCELLENT indicateur pour un business de services.
+
+BENCHMARKS SECTORIELS :
+- Services : 70-95% (normal)
+- Commerce : 30-50%
+- Production : 40-60%
+
+FORMAT RECOMMANDÉ : Pourcentage avec 1 décimale
+EXEMPLE AFFICHAGE : 94.8%
+
+-------------------------------------------------------------------
+MESURE 6 : Bénéfice_Net
+-------------------------------------------------------------------
+OBJECTIF : Calculer le bénéfice final après TOUS les coûts
+
+FORMULE :
+Bénéfice_Net = [Marge_Brute] - [Coûts_Fixes]
+
+EXPLICATION :
+- Marge Brute : 1 970 000 DH
+- Coûts Fixes : -379 200 DH
+- Résultat : 1 590 717 DH
+
+INTERPRÉTATION BUSINESS :
+C'est le VRAI profit. L'argent qui reste après avoir TOUT payé.
+(Avant impôts)
+
+PEUT ÊTRE NÉGATIF :
+Exemple Juillet 2024 :
+Marge Brute : 8 000 DH
+Coûts Fixes : -15 800 DH
+= Bénéfice Net : -7 800 DH (PERTE)
+
+FORMAT RECOMMANDÉ : Nombre entier
+EXEMPLE AFFICHAGE : 1 590 717 DH
+
+-------------------------------------------------------------------
+MESURE 7 : Marge_Nette_%
+-------------------------------------------------------------------
+OBJECTIF : Calculer le % de bénéfice net par rapport au CA
+
+FORMULE :
+Marge_Nette_% = DIVIDE([Bénéfice_Net], [CA_Total], 0)
+
+EXPLICATION :
+- [Bénéfice_Net] / [CA_Total]
+- Résultat : 76.5%
+
+INTERPRÉTATION BUSINESS :
+Pour chaque 100 DH de CA, 76.5 DH sont du profit net.
+EXCEPTIONNEL pour un business de services.
+
+BENCHMARKS SECTORIELS :
+- > 50% : Excellent (Ngroup ici : 76.5% ⭐)
+- 30-50% : Très bon
+- 20-30% : Bon
+- 10-20% : Correct
+- < 10% : Fragile
+
+PEUT ÊTRE NÉGATIF :
+Exemple Juillet 2024 : -16.2%
+= Perte de 16.2% du CA
+
+FORMAT RECOMMANDÉ : Pourcentage avec 1 décimale
+EXEMPLE AFFICHAGE : 76.5%
+
+═══════════════════════════════════════════════════════════════════
+SECTION 2 : ALERTES CONDITIONNELLES (2 MESURES)
+═══════════════════════════════════════════════════════════════════
+
+-------------------------------------------------------------------
+MESURE 8 : Statut_Marge
+-------------------------------------------------------------------
+OBJECTIF : Afficher automatiquement le statut selon la marge nette
+
+FORMULE :
+Statut_Marge = 
+VAR Marge = [Marge_Nette_%]
+RETURN
+SWITCH(
+    TRUE(),
+    Marge < 0.10, "🔴 Fragile",
+    Marge < 0.20, "🟠 Correct",
+    Marge < 0.30, "🟡 Bon",
+    Marge < 0.40, "🟢 Très Bon",
+    "⭐ Excellent"
+)
+
+EXPLICATION TECHNIQUE :
+- VAR : Déclare une variable (stocke temporairement la marge)
+- SWITCH(TRUE(), ...) : Évalue plusieurs conditions
+- Conditions testées dans l'ordre (première vraie = retournée)
+
+LOGIQUE DE DÉCISION :
+Si Marge < 10%    → 🔴 Fragile
+Si Marge < 20%    → 🟠 Correct
+Si Marge < 30%    → 🟡 Bon
+Si Marge < 40%    → 🟢 Très Bon
+Si Marge ≥ 40%    → ⭐ Excellent
+
+RÉSULTATS PROJET :
+- Global (76.5%) : ⭐ Excellent
+- Janvier 2024 (82.8%) : ⭐ Excellent
+- Juillet 2024 (-16.2%) : 🔴 Fragile
+
+CAS D'USAGE :
+Permet de voir IMMÉDIATEMENT le statut dans une carte.
+Pas besoin d'interpréter le chiffre.
+
+FORMAT : Texte (emoji + statut)
+
+-------------------------------------------------------------------
+MESURE 9 : Alerte_Couts
+-------------------------------------------------------------------
+OBJECTIF : Alerter si les coûts variables sont trop élevés
+
+FORMULE :
+Alerte_Couts = 
+VAR Ratio = DIVIDE([Coûts_Variables], [CA_Total], 0)
+RETURN
+SWITCH(
+    TRUE(),
+    Ratio > 0.50, "🔴 Coûts trop élevés",
+    Ratio > 0.30, "🟠 Surveiller",
+    "🟢 Sous contrôle"
+)
+
+EXPLICATION TECHNIQUE :
+- VAR Ratio : Calcule ratio Coûts Variables / CA
+- SWITCH(TRUE(), ...) : Évalue conditions
+
+LOGIQUE DE DÉCISION :
+Si Ratio > 50%    → 🔴 Coûts trop élevés (CRITIQUE)
+Si Ratio > 30%    → 🟠 Surveiller (ATTENTION)
+Si Ratio ≤ 30%    → 🟢 Sous contrôle (OK)
+
+RÉSULTATS PROJET :
+- Global (5.25%) : 🟢 Sous contrôle
+- Janvier 2024 (2.2%) : 🟢 Sous contrôle
+- Juillet 2024 (83%) : 🔴 Coûts trop élevés
+
+INTERPRÉTATION JUILLET 2024 :
+40 000 DH de coûts variables pour 48 000 DH de CA
+= 83% du CA part en coûts variables
+= Business non viable ce mois-là
+
+CAS D'USAGE :
+Détecte automatiquement les mois problématiques.
+Permet d'agir RAPIDEMENT.
+
+FORMAT : Texte (emoji + message)
+
+═══════════════════════════════════════════════════════════════════
+UTILISATION DANS LE DASHBOARD
+═══════════════════════════════════════════════════════════════════
+
+CARTES KPI (en haut) :
+- CA_Total
+- Marge_Brute_%
+- Bénéfice_Net
+- Marge_Nette_%
+
+CARTES ALERTES (sous les KPI) :
+- Statut_Marge
+- Alerte_Couts
+
+GRAPHIQUE EN ENTONNOIR (Répartition Résultat) :
+- CA_Total
+- Coûts_Variables
+- Marge_Brute
+- Coûts_Fixes
+- Bénéfice_Net
+
+GRAPHIQUE LIGNE (Évolution) :
+- CA_Total
+- Bénéfice_Net
+
+TABLEAU DÉTAILS MENSUEL :
+- Toutes les mesures disponibles en colonnes
+
+═══════════════════════════════════════════════════════════════════
+NOTES TECHNIQUES IMPORTANTES
+═══════════════════════════════════════════════════════════════════
+
+1. POURQUOI DIVIDE() au lieu de / ?
+   - DIVIDE(a, b, 0) évite erreur #DIV/0!
+   - Si b = 0, retourne 0 au lieu d'erreur
+   - Plus robuste en production
+
+2. POURQUOI VAR dans les alertes ?
+   - Calcule une seule fois (performance)
+   - Code plus lisible
+   - Évite répétition de la formule
+
+3. POURQUOI SWITCH(TRUE(), ...) ?
+   - Permet conditions multiples
+   - Plus flexible que IF imbriqués
+   - Évalue dans l'ordre (première vraie gagne)
+
+4. FORMATS RECOMMANDÉS :
+   - Montants : Nombre entier, séparateur milliers
+   - Pourcentages : 1 décimale
+   - Alertes : Texte
+
+═══════════════════════════════════════════════════════════════════
+EXTENSIONS POSSIBLES
+═══════════════════════════════════════════════════════════════════
+
+AUTRES MESURES UTILES (non implémentées ici) :
+
+// ROI Marketing
+ROI_Marketing = 
+DIVIDE(
+    [CA_Total],
+    CALCULATE([Coûts_Variables], Depenses[Categorie] = "Marketing"),
+    0
+) - 1
+
+// Évolution CA MoM
+Evol_CA_MoM = 
+VAR CA_Mois_Precedent = 
+    CALCULATE([CA_Total], DATEADD(Calendrier[Date], -1, MONTH))
+RETURN
+DIVIDE([CA_Total] - CA_Mois_Precedent, CA_Mois_Precedent, 0)
+
+// Panier Moyen
+Panier_Moyen = DIVIDE([CA_Total], COUNTROWS(Ventes), 0)
+
+// Coût par Client
+Cout_Par_Client = 
+DIVIDE([Coûts_Variables], DISTINCTCOUNT(Ventes[Client]), 0)
+
+═══════════════════════════════════════════════════════════════════
+FIN DU FICHIER FORMULES DAX
+═══════════════════════════════════════════════════════════════════
+
+Auteur : Boubacar Nikiema
+Contact : nikiemaboubacar@gmail.com
+Site : data.ngroupmediadigital.com
+Projet : Dashboard CA vs Rentabilité - Ngroup Media & Digital
+Licence : MIT
+
+© 2025 - Tous droits réservés
