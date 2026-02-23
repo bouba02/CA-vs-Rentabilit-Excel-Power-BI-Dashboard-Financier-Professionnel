@@ -478,28 +478,6 @@ Power Query M
 
 ---
 
-
-## 🤝 Contribution
-
-Les contributions sont les bienvenues ! 🎉
-
-### **Comment Contribuer ?**
-
-1. **Fork** le projet
-2. Créer une **branche** (`git checkout -b feature/AmazingFeature`)
-3. **Commit** vos changements (`git commit -m 'Add AmazingFeature'`)
-4. **Push** vers la branche (`git push origin feature/AmazingFeature`)
-5. Ouvrir une **Pull Request**
-
-### **Idées de Contributions**
-
-- 📊 Nouveaux graphiques (Gantt, Heatmap, Sankey)
-- 🔔 Alertes additionnelles (Cash flow, ROI, CAC)
-- 🌍 Traductions (EN, AR, ES)
-- 🤖 Scripts Python (automatisation)
-
----
-
 ## 📞 Contact & Support
 
 ### **Créateur du Projet**
@@ -515,7 +493,7 @@ Data Analyst | Business Intelligence Expert
 
 ### **Besoin d'Aide ?**
 
-- 💬 **Issues GitHub** : [Ouvrir une issue](https://github.com/bouba02/Dashboard-CA-Rentabilite/issues)
+- 💬 **Issues GitHub** : [Ouvrir une issue](https://github.com/bouba02/CA-vs-Rentabilit-Excel-Power-BI-Dashboard-Financier-Professionnel/issues)
 - 📺 **Vidéo complète** : [YouTube (43 min)](https://youtu.be/AUYo3agdDWY)
 - 📧 **Email direct** : nikiemaboubacar@gmail.com
 
@@ -561,9 +539,8 @@ Data Analyst | Business Intelligence Expert
 ![GitHub forks](https://img.shields.io/github/forks/bouba02/Dashboard-CA-Rentabilite?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/bouba02/Dashboard-CA-Rentabilite?style=social)
 
-![GitHub issues](https://img.shields.io/github/issues/bouba02/Dashboard-CA-Rentabilite)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/bouba02/Dashboard-CA-Rentabilite)
-![GitHub last commit](https://img.shields.io/github/last-commit/bouba02/Dashboard-CA-Rentabilite)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/bouba02/CA-vs-Rentabilit-Excel-Power-BI-Dashboard-Financier-Professionnel)
+![GitHub last commit](https://img.shields.io/github/last-commit/bouba02/CA-vs-Rentabilit-Excel-Power-BI-Dashboard-Financier-Professionnel)
 
 ---
 
@@ -574,4 +551,4 @@ Data Analyst | Business Intelligence Expert
 
 **Prêt à maîtriser votre rentabilité ? Téléchargez les fichiers et commencez maintenant !**
 
-[⬇️ Download ZIP](https://github.com/bouba02/Dashboard-CA-Rentabilite/archive/refs/heads/main.zip) | [⭐ Star this repo](https://github.com/bouba02/Dashboard-CA-Rentabilite) | [📺 Watch Tutorial](https://youtu.be/AUYo3agdDWY)
+[⬇️ Download ZIP](https://github.com/bouba02/Dashboard-CA-Rentabilite/archive/refs/heads/main.zip) | [⭐ Star this repo](https://github.com/bouba02/bouba02/CA-vs-Rentabilit-Excel-Power-BI-Dashboard-Financier-Professionnel) | [📺 Watch Tutorial](https://youtu.be/AUYo3agdDWY)
