@@ -7,7 +7,7 @@
 [![DAX](https://img.shields.io/badge/DAX-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)](https://dax.guide)
 [![Licence](https://img.shields.io/badge/Licence-MIT-green?style=for-the-badge)](LICENSE)
 
-![Dashboard Preview](Dashboard CA vs Rentabilité.png)
+![Dashboard Preview]("Dashboard CA vs Rentabilité.png")
 
 ---
 
