@@ -535,9 +535,9 @@ Data Analyst | Business Intelligence Expert
 
 ## 📈 Statistiques du Projet
 
-![GitHub stars](https://img.shields.io/github/stars/bouba02/Dashboard-CA-Rentabilite?style=social)
-![GitHub forks](https://img.shields.io/github/forks/bouba02/Dashboard-CA-Rentabilite?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/bouba02/Dashboard-CA-Rentabilite?style=social)
+![GitHub stars](https://img.shields.io/github/stars/bouba02/CA-vs-Rentabilit-Excel-Power-BI-Dashboard-Financier-Professionnel?style=social)
+![GitHub forks](https://img.shields.io/github/forks/bouba02/CA-vs-Rentabilit-Excel-Power-BI-Dashboard-Financier-Professionnel?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/bouba02/CA-vs-Rentabilit-Excel-Power-BI-Dashboard-Financier-Professionnel?style=social)
 
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/bouba02/CA-vs-Rentabilit-Excel-Power-BI-Dashboard-Financier-Professionnel)
 ![GitHub last commit](https://img.shields.io/github/last-commit/bouba02/CA-vs-Rentabilit-Excel-Power-BI-Dashboard-Financier-Professionnel)
@@ -551,4 +551,4 @@ Data Analyst | Business Intelligence Expert
 
 **Prêt à maîtriser votre rentabilité ? Téléchargez les fichiers et commencez maintenant !**
 
-[⬇️ Download ZIP](https://github.com/bouba02/Dashboard-CA-Rentabilite/archive/refs/heads/main.zip) | [⭐ Star this repo](https://github.com/bouba02/bouba02/CA-vs-Rentabilit-Excel-Power-BI-Dashboard-Financier-Professionnel) | [📺 Watch Tutorial](https://youtu.be/AUYo3agdDWY)
+[⬇️ Download ZIP](https://github.com/bouba02/CA-vs-Rentabilit-Excel-Power-BI-Dashboard-Financier-Professionnel/archive/refs/heads/main.zip) | [⭐ Star this repo](https://github.com/bouba02/CA-vs-Rentabilit-Excel-Power-BI-Dashboard-Financier-Professionnel) | [📺 Watch Tutorial](https://youtu.be/AUYo3agdDWY)
