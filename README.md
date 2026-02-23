@@ -1,274 +1,209 @@
 # 📊 Dashboard CA vs Rentabilité | Excel + Power BI
 
-**Analyse financière complète avec visualisations professionnelles**
+> Analyse complète de 24 mois de données financières avec dashboard interactif professionnel
 
-> Vous faites du chiffre d'affaires... mais gagnez-vous vraiment de l'argent ? 🤔
+[![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://powerbi.microsoft.com)
+[![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)](https://www.microsoft.com/excel)
+[![DAX](https://img.shields.io/badge/DAX-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)](https://dax.guide)
+[![Licence](https://img.shields.io/badge/Licence-MIT-green?style=for-the-badge)](LICENSE)
 
----
-
-## 📋 Vue d'ensemble
-
-Ce projet présente un **dashboard financier professionnel** qui analyse 24 mois de données réelles (2 079 000 MAD de CA) pour identifier où va chaque dirham et prendre des décisions basées sur la data.
-
-**[Regarder la vidéo complète sur YouTube →](https://youtu.be/AUYo3agdDWY)**
-
-### 🎯 Objectif
-
-Transformer des données brutes en **insights business actionnables** en distinguant clairement:
-- **Chiffre d'Affaires** (l'argent qui ENTRE)
-- **Rentabilité** (l'argent qui RESTE)
-
-### 🔴 Cas d'Étude Principal
-
-**Juillet 2024 — Mois Catastrophe**
-- CA: 48 000 MAD (-54% vs Janvier)
-- Coûts Variables: 40 000 MAD (campagne marketing massive)
-- Bénéfice Net: **-7 800 MAD** (PERTE)
-- Marge Nette: **-16.2%** 🚨
-
-**vs Janvier 2024 — Excellent Mois**
-- CA: 105 000 MAD
-- Coûts Variables: 2 300 MAD
-- Bénéfice Net: 86 900 MAD
-- Marge Nette: **82.8%** ⭐
+![Dashboard Preview](assets/dashboard-preview.png)
 
 ---
 
-## 📊 Données Analysées
+## 🎯 Problématique Business
 
-| Métrique | Valeur |
-|----------|--------|
-| **CA Total** | 2 079 000 MAD |
-| **Bénéfice Net** | 1 590 717 MAD |
-| **Marge Globale** | 76.5% |
-| **Période** | 24 mois (Jan 2023 - Déc 2024) |
-| **Lignes de données** | 233 (126 ventes + 107 dépenses) |
-| **Services** | 4 (Shooting Photo, Montage Vidéo, Production, Design) |
+**40% des entrepreneurs font du chiffre d'affaires... mais ne gagnent PAS d'argent.**
 
----
+Ils confondent :
+- 💰 **Chiffre d'Affaires** (l'argent qui ENTRE)
+- 💸 **Rentabilité** (l'argent qui RESTE)
 
-## 🎓 Compétences Acquises
+Entre les deux, il y a les **COÛTS**.
 
-✅ Modélisation financière Excel  
-✅ ETL Power BI (Extract, Transform, Load)  
-✅ DAX avancé (CALCULATE, DIVIDE, SWITCH, VAR)  
-✅ Data visualization (Waterfall, KPIs, alertes conditionnelles)  
-✅ Business Intelligence orientée décision  
-✅ Analyse financière professionnelle  
+Ce projet démontre comment construire un système complet de pilotage financier pour :
+- ✅ Suivre 7 KPIs critiques en temps réel
+- ✅ Détecter automatiquement les mois problématiques
+- ✅ Identifier où part chaque dirham
+- ✅ Prendre des décisions basées sur la data
 
 ---
 
-## 📁 Structure des Fichiers
+## 📈 Résultats Clés du Projet
 
-Copy
-CA-vs-Rentabilite-Excel-Power-BI-Dashboard/ │ ├── Pilotage_Financier_Ngroup.xlsx # Fichier Excel complet │ ├── Onglet "Parametres" # Configuration globale │ ├── Onglet "Ventes" # 126 lignes de ventes │ ├── Onglet "Depenses" # 107 lignes de dépenses │ ├── Onglet "Dashboard_Excel" # Synthèse rapide │ └── Onglet "Cash_Flow" # Préparation Thème 3 │ ├── Dashboard CA vs Rentabilite.pbix # Dashboard Power BI complet │ ├── Dashboard CA vs Rentabilite.pdf # Export PDF du dashboard │ ├── Dashboard CA vs Rentabilite.png # Screenshot du dashboard │ ├── FORMULES_DAX_DOCUMENTEES.txt # Toutes les mesures DAX │ └── README.md # Ce fichier
+### **Performance Globale (24 mois)**
 
+| Indicateur | Valeur | Statut |
+|------------|--------|--------|
+| **CA Total** | 2 079 000 MAD | ✅ |
+| **Bénéfice Net** | 1 590 717 MAD | ✅ |
+| **Marge Nette Moyenne** | 76.5% | ⭐ Excellent |
+| **Coûts Variables** | 71 380 MAD | 🟢 Sous contrôle |
+| **Coûts Fixes** | 379 200 MAD | 🟢 Maîtrisés |
 
----
+### **Cas d'Étude : Juillet 2024 (Mois Catastrophe)**
 
-## 🗂️ Contenu Excel Détaillé
+| Indicateur | Janvier 2024 | Juillet 2024 | Évolution |
+|------------|--------------|--------------|-----------|
+| **CA** | 105 000 MAD | 48 000 MAD | -54% 🔴 |
+| **Coûts Variables** | 2 300 MAD | 40 000 MAD | +1639% 🔴 |
+| **Bénéfice Net** | 86 900 MAD | -7 800 MAD | -109% 🔴 |
+| **Marge Nette** | 82.8% ⭐ | -16.2% 🔴 | -99 points |
 
-### **Onglet 1 : PARAMETRES**
-Configuration centralisée pour réutilisation
+**Cause identifiée :** Campagne marketing non-rentable (40K investis pour 48K de CA généré)
 
-Devise: MAD
-Année d'analyse: 2024
-Seuil d'alerte cash: 20 000 MAD
-TVA: 20%
-Objectifs CA: 2 500 000 MAD
-Objectifs Cash: 1 000 000 MAD
-
-### **Onglet 2 : VENTES** (126 lignes)
-Transactions réelles avec calculs automatiques
-
-| Colonne | Exemple | Type |
-|---------|---------|------|
-| Date_Facture | 01/01/2024 | Date |
-| Invoice_ID | INV-001 | Texte |
-| Client | Client A | Texte |
-| Produit | Shooting Photo | Texte |
-| Quantité | 1 | Nombre |
-| Prix_Unitaire | 5 000 | Nombre |
-| Montant_HT | =E×F | **Formule** |
-| TVA (20%) | =G×0.2 | **Formule** |
-| Montant_TTC | =G+H | **Formule** |
-| Date_Paiement_Prévue | 31/01/2024 | Date |
-| Date_Paiement_Réelle | 28/01/2024 | Date |
-| Statut_Paiement | Payé | Texte |
-
-### **Onglet 3 : DEPENSES** (107 lignes)
-Expenses avec classification fixe/variable
-
-| Colonne | Exemple | Type |
-|---------|---------|------|
-| Date_Depense | 01/01/2024 | Date |
-| Expense_ID | EXP-001 | Texte |
-| Fournisseur | Fournisseur X | Texte |
-| **Type_Cout** | **FIXE ou VARIABLE** | **Texte** |
-| Catégorie | Loyer | Texte |
-| Montant | 3 000 | Nombre |
-| Date_Paiement | 05/01/2024 | Date |
-
-**Coûts Fixes** (tombent chaque mois):
-- Loyer: 3 000 MAD
-- Salaires: 12 000 MAD
-- Assurance: 800 MAD
-
-**Coûts Variables** (dépendent de l'activité):
-- Marketing: varie
-- Matériel: varie
-- Freelances: varie
-
-### **Onglet 4 : DASHBOARD_EXCEL**
-Synthèse rapide avec formules
-
-CA Total = SUMIF(Ventes!G:G,">0") Coûts Variables = SUMIFS(Depenses!G:G, Depenses!D:D, "Variable") Coûts Fixes = SUMIFS(Depenses!G:G, Depenses!D:D, "Fixe") Marge Brute = CA Total - Coûts Variables Marge Brute % = Marge Brute / CA Total Bénéfice Net = Marge Brute - Coûts Fixes Marge Nette % = Bénéfice Net / CA Total
-
-
-### **Onglet 5 : CASH_FLOW**
-Préparé pour la vidéo Thème 3 (Cash Flow Management)
+**Décision business :** Arrêt immédiat de ce type de campagne, ROI négatif détecté par le dashboard
 
 ---
 
-## 📊 Dashboard Power BI — Visuels Inclus
+## 🎥 Vidéo Tutoriel Complète
 
-### **Haut de Page: 4 KPI Cards**
-Vue immédiate des métriques clés
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/VOTRE_LIEN_VIDEO)
 
-| Card | Valeur | Couleur |
-|------|--------|---------|
-| CA Total | 2 079 000 MAD | Bleu #4472C4 |
-| Marge Brute % | 94.8% | Orange #EB601B |
-| Bénéfice Net | 1 590 717 MAD | Vert #70AD47 |
-| Marge Nette % | 76.5% | Gris foncé |
+**Durée :** 43 minutes | **Langue :** Français
 
-### **Deuxième Ligne: 2 Alertes Conditionnelles**
+### **⏱️ Timestamps**
 
-#### Alerte 1: Statut Marge
-Marge Nette < 10% → 🔴 Fragile Marge Nette < 20% → 🟠 Correct Marge Nette < 30% → 🟡 Bon Marge Nette < 40% → 🟢 Très Bon Marge Nette ≥ 40% → ⭐ Excellent
-
-
-#### Alerte 2: Coûts Variables
-Ratio > 50% → 🔴 Coûts trop élevés Ratio > 30% → 🟠 À surveiller Ratio ≤ 30% → 🟢 Sous contrôle
-
-
-### **Graphique 1: Évolution Temporelle (Ligne)**
-Montre CA et Bénéfice mois par mois
-- **Révèle**: Juillet 2024 en creux (anomalie identifiée)
-- **Axe X**: Mois-Année (24 points)
-- **Axe Y**: CA Total vs Bénéfice Net
-- **Insight**: Corrélation CA ≠ Bénéfice
-
-### **Graphique 2: Waterfall (Cascade Financière)**
-Montre visuellement où part l'argent — **Le plus important**
-
-📊 WATERFALL - Comme une rivière qui diminue
-
-CA Total (2M) ↓ [-] Coûts Variables (71K) ↓ = Marge Brute (2M) ↓ [-] Coûts Fixes (379K) ↓ = Bénéfice Net (1.59M)
-
-
-En 3 secondes, tu vois:
-- Combien tu gagnes (CA)
-- Combien tu dépenses (Coûts)
-- Ce qui te reste (Bénéfice)
-
-### **Graphique 3: Performance par Service (Barres)**
-Classement des 4 services par rentabilité
-
-Production Événementielle 858K ████████████████ Shooting Photo 668K ███████████ Montage Vidéo 257K █████ Design Graphique 256K █████
-
-
-Permet de décider:
-- ✅ Quel service développer
-- ⚠️ Quel service optimiser
-- ❌ Quel service arrêter
-
-### **Filtres Interactifs (Slicers)**
-Exploration dynamique du dashboard
-
-- **Filtre Année**: 2023 | 2024
-- **Filtre Mois**: Jan → Déc
-- **Tous les visuels se mettent à jour instantanément**
-
-**Exemple d'interaction**:
-Clic sur Juillet
-Toutes les cartes changent
-Alertes s'affichent: 🔴 Fragile | 🔴 Coûts trop élevés
-Waterfall révèle la catastrophe marketing
-Décision: "Ne plus investir 40K en marketing"
+| Temps | Section | Contenu |
+|-------|---------|---------|
+| **00:00** | Introduction | Problématique : CA ≠ Rentabilité |
+| **01:00** | Théorie | CA vs Rentabilité + Schéma P&L |
+| **03:00** | Fichier Excel | Structure 5 onglets (Ventes, Dépenses, Parametres) |
+| **06:00** | Import Power BI | Modèle relationnel + Table Calendrier |
+| **09:50** | Mesures DAX | 7 KPIs + 2 Alertes conditionnelles |
+| **15:00** | Dashboard Design | Cartes KPI, Waterfall, Évolution, Filtres |
+| **38:00** | Analyse Business | Comparaison Janvier vs Juillet 2024 |
+| **42:20** | Conclusion | Fichiers gratuits + Prochaine vidéo |
 
 ---
 
-## 🔧 Mesures DAX — Détaillées
+## 📁 Structure du Projet
+```
+Dashboard-CA-Rentabilite/
+├── 📄 README.md                               (Ce fichier)
+├── 📊 Excel/
+│   ├── Pilotage_Financier_Ngroup.xlsx         (Fichier source complet)
+│   └── Template_Vierge.xlsx                   (Template réutilisable)
+├── 📈 PowerBI/
+│   ├── Dashboard_CA_Rentabilite.pbix          (Dashboard complet)
+│   └── Dashboard_Template.pbix                (Template vierge)
+├── 📚 Documentation/
+│   ├── Guide_Complet.pdf                      (Guide étape par étape)
+│   ├── Formules_DAX.txt                       (9 mesures documentées)
+│   └── Analyses_Business.md                   (Insights détaillés)
+├── 🖼️ Assets/
+│   ├── dashboard-preview.png                  (Capture dashboard)
+│   ├── waterfall-chart.png                    (Graphique cascade)
+│   └── kpi-cards.png                          (Cartes indicateurs)
+└── 📜 LICENSE                                 (MIT)
+```
 
-### **7 KPIs Fondamentaux**
+---
 
-#### 1️⃣ CA_Total
+## 🛠️ Technologies Utilisées
+
+| Technologie | Version | Usage |
+|-------------|---------|-------|
+| **Microsoft Excel** | 365 / 2021+ | Structuration données (233 lignes) |
+| **Power BI Desktop** | Dernière version | Dashboard interactif |
+| **DAX** | Natif Power BI | 9 mesures calculées |
+| **Power Query** | Natif Power BI | Import & nettoyage |
+
+**💡 100% Gratuit** - Aucune licence payante requise
+
+---
+
+## 📊 Données du Projet
+
+### **Volumétrie**
+
+- **233 lignes de données** (126 ventes + 107 dépenses)
+- **24 mois d'historique** (Janvier 2023 → Décembre 2024)
+- **5 onglets Excel structurés**
+- **3 tables Power BI** (Ventes, Depenses, Calendrier)
+
+### **Structure Fichier Excel**
+
+#### **Onglet 1 : PARAMETRES**
+```
+Paramètres configurables :
+- Devise : MAD
+- Année d'analyse : 2024
+- Seuil alerte cash : 20 000 MAD
+- TVA : 20%
+- Objectifs CA et Cash
+```
+
+#### **Onglet 2 : VENTES (126 lignes)**
+
+| Colonne | Type | Description |
+|---------|------|-------------|
+| `Date_Facture` | Date | Date de la vente |
+| `Invoice_ID` | Texte | Numéro facture (INV-001...) |
+| `Client` | Texte | Client A, B, C... (anonymisés) |
+| `Produit` | Texte | Shooting Photo, Montage Vidéo, etc. |
+| `Quantite` | Nombre | Quantité vendue |
+| `Prix_Unitaire` | Nombre | Prix par unité |
+| `Montant_HT` | Formule | `=Quantite * Prix_Unitaire` |
+| `TVA` | Formule | `=Montant_HT * 0.2` |
+| `Montant_TTC` | Formule | `=Montant_HT + TVA` |
+| `Date_Paiement_Prevue` | Date | Échéance prévue |
+| `Date_Paiement_Reelle` | Date | Paiement effectif |
+| `Statut_Paiement` | Texte | Payé / En attente / Retard |
+
+#### **Onglet 3 : DEPENSES (107 lignes)**
+
+| Colonne | Type | Description |
+|---------|------|-------------|
+| `Date_Depense` | Date | Date de la dépense |
+| `Expense_ID` | Texte | Identifiant (EXP-001...) |
+| `Fournisseur` | Texte | Nom fournisseur |
+| `Type_Cout` | Texte | **FIXE** ou **VARIABLE** |
+| `Categorie` | Texte | Loyer, Salaires, Marketing, Matériel |
+| `Montant` | Nombre | Montant dépense |
+| `Date_Paiement` | Date | Date paiement effectué |
+
+**🔑 Colonne critique :** `Type_Cout` permet de différencier coûts fixes vs variables
+
+---
+
+## 🧮 Mesures DAX (9 Mesures)
+
+### **7 KPIs Principaux**
 ```dax
+// 1. CA Total
 CA_Total = SUM(Ventes[Montant_HT])
-Signification: Somme de tous les montants hors taxes des ventes
-Format: Nombre entier
-Résultat: 2 079 000 MAD
 
-2️⃣ Coûts_Variables
+// 2. Coûts Variables
 Coûts_Variables = 
 CALCULATE(
     SUM(Depenses[Montant]),
     Depenses[Type_Cout] = "Variable"
 )
-Signification: Somme uniquement des dépenses marquées "Variable"
-Exemple: Marketing, Matériel, Freelances
-Résultat: 71 380 MAD
 
-3️⃣ Coûts_Fixes
+// 3. Coûts Fixes
 Coûts_Fixes = 
 CALCULATE(
     SUM(Depenses[Montant]),
     Depenses[Type_Cout] = "Fixe"
 )
-Signification: Somme uniquement des dépenses marquées "Fixe"
-Exemple: Loyer, Salaires, Assurance
-Résultat: 379 200 MAD
 
-4️⃣ Marge_Brute
+// 4. Marge Brute
 Marge_Brute = [CA_Total] - [Coûts_Variables]
-Signification: CA après avoir payé les coûts variables
-Formule: CA - Coûts Variables
-Résultat: 2 007 620 MAD
 
-5️⃣ Marge_Brute_%
-Marge_Brute_% = 
-DIVIDE(
-    [Marge_Brute], 
-    [CA_Total], 
-    0
-)
-Signification: Pourcentage de marge brute
-Formule: Marge Brute / CA
-Résultat: 94.8%
-Note: DIVIDE évite erreurs si CA=0
+// 5. Marge Brute %
+Marge_Brute_% = DIVIDE([Marge_Brute], [CA_Total], 0)
 
-6️⃣ Bénéfice_Net
+// 6. Bénéfice Net
 Bénéfice_Net = [Marge_Brute] - [Coûts_Fixes]
-Signification: Ce qui reste après TOUS les coûts
-Formule: Marge Brute - Coûts Fixes
-Résultat: 1 590 717 MAD
-Critique: C'est le vrai profit
 
-7️⃣ Marge_Nette_%
-Marge_Nette_% = 
-DIVIDE(
-    [Bénéfice_Net], 
-    [CA_Total], 
-    0
-)
-Signification: Pourcentage de profit réel
-Formule: Bénéfice Net / CA
-Résultat: 76.5%
-Interprétation: Pour 100 MAD gagnés, 76,50 MAD restent
+// 7. Marge Nette %
+Marge_Nette_% = DIVIDE([Bénéfice_Net], [CA_Total], 0)
+```
 
-2 Alertes Conditionnelles Avancées
-🎯 Alerte 1: Statut_Marge
+### **2 Alertes Conditionnelles**
+```dax
+// 8. Statut Marge (Alerte visuelle)
 Statut_Marge = 
 VAR Marge = [Marge_Nette_%]
 RETURN
@@ -280,225 +215,436 @@ SWITCH(
     Marge < 0.40, "🟢 Très Bon",
     "⭐ Excellent"
 )
-Logique:
 
-Si Marge Nette < 10% → 🔴 DANGER (perte possible)
-Si Marge Nette < 20% → 🟠 ATTENTION (fragile)
-Si Marge Nette < 30% → 🟡 BON (acceptable)
-Si Marge Nette < 40% → 🟢 TRÈS BON (solide)
-Sinon → ⭐ EXCELLENT (optimal)
-Exemple Juillet 2024: Marge = -16.2% → 🔴 Fragile
-
-⚠️ Alerte 2: Alerte_Couts
+// 9. Alerte Coûts Variables
 Alerte_Couts = 
 VAR Ratio = DIVIDE([Coûts_Variables], [CA_Total], 0)
 RETURN
 SWITCH(
     TRUE(),
     Ratio > 0.50, "🔴 Coûts trop élevés",
-    Ratio > 0.30, "🟠 À surveiller",
+    Ratio > 0.30, "🟠 Surveiller",
     "🟢 Sous contrôle"
 )
-Logique:
+```
 
-Si Coûts Variables > 50% du CA → 🔴 DANGER
-Si Coûts Variables > 30% du CA → 🟠 ATTENTION
-Sinon → 🟢 OK
-Exemple Juillet 2024: Coûts Variables = 83% du CA → 🔴 Trop élevés
+---
 
-💡 Key Insights & Analyses
-Découverte 1: Juillet 2024 — Catastrophe Identifiée 🔴
-Le Problème:
+## 📊 Composants du Dashboard
 
-Campagne marketing massive lancée: 40 000 MAD
-CA généré: 48 000 MAD seulement
-Résultat: Perte de 7 800 MAD
-Analyse Waterfall:
+### **1. Cartes KPI (4 indicateurs)**
 
-CA: 48K
-  ├─ Coûts Variables: -40K (83% du CA!)
-  ├─ Marge Brute: 8K
-  ├─ Coûts Fixes: -15.8K
-  └─ Bénéfice: -7.8K ❌
-Alertes Levées:
+![KPI Cards](assets/kpi-cards.png)
 
-Statut Marge: 🔴 Fragile (-16.2%)
-Alerte Coûts: 🔴 Trop élevés (83%)
-Action Recommandée:
+- **CA Total** : 2 079 000 MAD (Bleu #4472C4)
+- **Marge Brute %** : 96.6% (Orange #EB601B)
+- **Bénéfice Net** : 1 590 717 MAD (Vert #70AD47)
+- **Marge Nette %** : 76.5% (Gris foncé)
 
-❌ NE JAMAIS relancer une campagne similaire
-✅ Analyser pourquoi le ROI était si mauvais
-✅ Tester à petite échelle avant gros investissements
-Découverte 2: Janvier 2024 — Modèle Idéal ⭐
-Le Succès:
+### **2. Alertes Automatiques (2 cartes)**
 
-CA: 105 000 MAD
-Coûts Variables: 2 300 MAD (2% du CA)
-Bénéfice: 86 900 MAD
-Analyse Waterfall:
+- **Statut Marge** : ⭐ Excellent / 🟢 Bon / 🟠 Attention / 🔴 Danger
+- **Alerte Coûts** : 🟢 Sous contrôle / 🟠 Surveiller / 🔴 Trop élevés
 
-CA: 105K
-  ├─ Coûts Variables: -2.3K (2% du CA)
-  ├─ Marge Brute: 102.7K
-  ├─ Coûts Fixes: -15.8K
-  └─ Bénéfice: 86.9K ✅
-Alertes Levées:
+### **3. Graphique Évolution (Ligne)**
 
-Statut Marge: ⭐ Excellent (82.8%)
-Alerte Coûts: 🟢 Sous contrôle (2%)
-Action Recommandée:
+- **Axe X** : Mois-Année (Jan 2023 → Déc 2024)
+- **Axe Y** : CA Total, Bénéfice Net
+- **Insight** : Visualise la croissance et détecte Juillet 2024 (chute)
 
-✅ C'est la structure idéale à répliquer
-✅ Maintenir CA autour de 100K/mois
-✅ Garder marketing sous 3K sauf si ROI prouvé
-Découverte 3: Business Solide Globalement 💚
-Performance 24 mois:
+### **4. Graphique Waterfall (Cascade Financière)**
 
-Marge nette moyenne: 76.5%
-Bénéfice: 1 590 717 MAD
-Juillet est l'exception (pas la tendance)
-Si on enlève Juillet:
+![Waterfall Chart](assets/waterfall-chart.png)
 
-23 mois sans juillet: Marge moyenne ≈ 80%
-Business est TRÈS rentable
-Conclusion:
+**Cascade du CA au Bénéfice :**
+```
+CA Total : 2 079 000 MAD
+    ↓ (-71 380)
+Marge Brute : 2 007 620 MAD
+    ↓ (-379 200)
+Bénéfice Net : 1 590 717 MAD
+```
 
-✅ Système de base très sain
-✅ Juste éviter les erreurs marketing comme juillet
-✅ Peu d'optimisations nécessaires (déjà excellent)
-🚀 Comment Utiliser Ce Projet
-Option 1: Adapter à Votre Business ⭐ RECOMMANDÉ
-Téléchargez Pilotage_Financier_Ngroup.xlsx
-Supprimez les données exemple (conservez la structure)
-Insérez vos propres données:
-Onglet Ventes: Vos 12+ derniers mois de ventes
-Onglet Depenses: Vos 12+ derniers mois de dépenses
-Les formules Excel s'actualisent automatiquement
-Importez dans Power BI
-Visualisez votre rentabilité réelle
-Option 2: Utiliser le Dashboard Power BI
-Téléchargez Dashboard CA vs Rentabilite.pbix
-Ouvrez dans Power BI Desktop
-Accueil → Transformer les données
-Remplacez les sources de données
-Les visuels se mettent à jour instantanément
-Option 3: Ajouter à Votre Portfolio
-✅ Utilisez comme template pour entretiens
-✅ Présentez en mission consulting
-✅ Démontrez vos compétences Power BI + DAX
-✅ Montrez la capacité à créer dashboards métier
-📈 Cas d'Usage
-✓ Entrepreneurs & PME: Piloter la rentabilité du business
-✓ Data Analysts: Template professionnel pour portfolio
-✓ Consultants BI: Dashboard client prêt à l'emploi
-✓ Étudiants Finance: Comprendre P&L et rentabilité
-✓ Freelance BI: Proposer dashboards financiers sur mesure
-✓ Managers: Suivre la performance financière mensuelle
+**Couleurs :**
+- Vert : Gains (CA, Marge Brute)
+- Rouge : Pertes (Coûts Variables, Coûts Fixes)
 
-🎥 Vidéo Complète — YouTube
-Regarder sur YouTube →
+### **5. Analyse par Service (Barres horizontales)**
 
-Durée: 43 minutes
-Contenu: Étape par étape du concept au dashboard
+- **Marge Nette %** par type de service
+- **Tri** : Du plus rentable au moins rentable
+- **Utilité** : Identifier services à développer vs optimiser
 
-Timestamps Détaillés
-Timestamp	Sujet	Durée
-00:00	Introduction: Le Problème des Entrepreneurs	1 min
-01:00	PARTIE 1: Théorie (CA vs Rentabilité)	2 min
-03:00	PARTIE 2: Présentation Fichier Excel	3 min
-06:00	PARTIE 3: Import Power BI + Modèle	3 min 50s
-09:50	PARTIE 4: Mesures DAX + Alertes	5 min 10s
-15:00	PARTIE 5: Création Dashboard	23 min
-38:00	PARTIE 6: Analyse & Interprétation	4 min 20s
-42:20	Conclusion + Fichiers Gratuits	2 min 40s
-🔜 Série "3 Dashboards Business"
-Thème 1: CA vs Rentabilité (CETTE VIDÉO)
-→ Identifier où va chaque euro
-→ Détecter les mois déficitaires
-→ Améliorer la rentabilité
+### **6. Filtres Interactifs (Slicers)**
 
-Thème 2: Valorisation d'Entreprise
-→ 4 méthodes de valorisation
-→ Simulateur Excel interactif
-→ Préparer une levée de fonds
+- **Filtre Année** : 2023, 2024
+- **Filtre Mois** : Janvier → Décembre
+- **Impact** : Dashboard se met à jour dynamiquement
 
-Thème 3: Cash Flow Management
-→ Trésorerie temps réel
-→ Prévisions de cash
-→ Gestion du working capital
+---
 
-🔧 Requirements
-Outil	Version	Coût
-Excel	2016+ ou Office 365	Gratuit/Abonnement
-Power BI Desktop	Latest	GRATUIT
-Windows ou Mac	10+ / 10.12+	-
-Pas de dépendances externes
-Aucune licence payante requise
+## 🔍 Analyses Business Réalisées
 
-📚 Ressources Complémentaires
-Apprendre DAX
-DAX Function Reference — Réference complète
-DAX Studio — Debugger DAX
-Microsoft Learn - DAX
-Power BI
-Power BI Documentation
-Power BI Community Forums
-Power BI Desktop Download
-Excel
-Excel Functions Guide
-Excel Online Tutorials
-Financial Analysis
-Financial Statements Basics
-P&L Analysis Guide
-📄 License
-Ce projet est libre d'utilisation pour:
+### **Analyse 1 : Performance Globale (24 mois)**
 
-✅ Projets personnels
-✅ Projets professionnels
-✅ Portfolios et démonstrations
-✅ Adaptations et modifications
-Attribution appréciée (mention du lien GitHub)
+**Constat :**
+- Business **très rentable** (76.5% marge nette)
+- Croissance **stable** avec **1 exception critique** (Juillet 2024)
+- Coûts Variables **bien maîtrisés** (3.4% du CA)
 
-📞 Contact & Support
-📧 Email: nikiemaboubacar@gmail.com
-💼 LinkedIn: Boubacar Nikiema
-🌐 Site: data.ngroupmediadigital.com
-🐙 GitHub: github.com/bouba02
+**Recommandation :**
+✅ Maintenir la structure actuelle
+✅ Dupliquer stratégie Janvier 2024 (mois le plus rentable)
 
-Besoin d'Aide?
-❓ Questions: Ouvrez une Issue
-💡 Suggestions: Fork le repo et proposez des améliorations
-🐛 Bugs: Reportez avec description détaillée
-📧 Collaborations: Contactez par email
-🙏 Merci!
-Merci d'utiliser ce dashboard!
+---
 
-Si ça vous aide:
+### **Analyse 2 : Juillet 2024 (Mois Catastrophe)**
 
-⭐ Star ce repo
-🍴 Fork pour vos adaptations
-💬 Partagez vos résultats en commentaire YouTube
-📢 Recommandez à votre réseau
-📊 Statistiques du Projet
-Métrique	Valeur
-Lignes de données	233
-Mesures DAX	9
-Visuels Power BI	6+
-Mois analysés	24
-Services	4
-Durée vidéo	43 min
-Niveau complexité	Intermédiaire-Avancé
+#### **Chiffres**
 
+| Indicateur | Valeur | vs Janvier |
+|------------|--------|------------|
+| CA | 48 000 MAD | -54% 🔴 |
+| Coûts Variables | 40 000 MAD | +1639% 🔴 |
+| Coûts Fixes | 15 800 MAD | = |
+| Bénéfice Net | -7 800 MAD | -109% 🔴 |
+| Marge Nette | -16.2% | -99 pts 🔴 |
 
-Ngroup Media & Digital | Data Analytics & Business Intelligence
+#### **Cause Identifiée**
 
-Dernière mise à jour: Décembre 2024
-Repository: github.com/bouba02/CA-vs-Rentabilite-Excel-Power-BI-Dashboard
+**Campagne marketing massive :**
+- Investissement : 40 000 MAD
+- CA généré : 48 000 MAD
+- ROI : **-16.2%** (catastrophique)
+- Ratio Coûts/CA : **83%** (seuil critique > 50%)
 
-🎓 Citation
-Si vous utilisez ce projet dans un article ou projet professionnel, citez:
+#### **Alertes Dashboard Activées**
 
-Nikiema, B. (2024). Dashboard CA vs Rentabilité - Excel + Power BI.
-GitHub: github.com/bouba02/CA-vs-Rentabilite-Excel-Power-BI-Dashboard
+🔴 **Statut Marge** : Fragile  
+🔴 **Alerte Coûts** : Coûts trop élevés
 
-Questions? Consultez la vidéo complète → https://youtu.be/AUYo3agdDWY 🎥
+#### **Décisions Business**
+
+❌ **Arrêt immédiat** de ce type de campagne  
+✅ **Analyse post-mortem** : Pourquoi le ROI est négatif ?  
+✅ **Test A/B obligatoire** avant gros investissement marketing  
+✅ **Budget marketing maximum** : 5% du CA prévisionnel  
+
+---
+
+### **Analyse 3 : Janvier 2024 (Mois Exemplaire)**
+
+#### **Chiffres**
+
+| Indicateur | Valeur | Statut |
+|------------|--------|--------|
+| CA | 105 000 MAD | ✅ |
+| Coûts Variables | 2 300 MAD | 🟢 2.2% du CA |
+| Coûts Fixes | 15 800 MAD | 🟢 Normaux |
+| Bénéfice Net | 86 900 MAD | ✅ |
+| Marge Nette | **82.8%** | ⭐ Excellent |
+
+#### **Facteurs de Succès**
+
+✅ CA élevé (105K)  
+✅ Coûts Variables ultra-maîtrisés (2.3K seulement)  
+✅ Marketing efficace à petit budget  
+✅ Pas de dépenses exceptionnelles  
+
+#### **Recommandations Stratégiques**
+
+📌 **Répliquer ce modèle :**
+- Maintenir CA autour de 100K/mois
+- Budget marketing < 3K sauf ROI prouvé
+- Focus sur services à forte marge
+
+---
+
+## 🚀 Installation & Utilisation
+
+### **Prérequis**
+```
+✅ Microsoft Excel (2016+ ou Office 365)
+✅ Power BI Desktop (gratuit)
+   → Télécharger : https://powerbi.microsoft.com/desktop/
+✅ Windows 10/11 ou macOS (Excel Online compatible)
+```
+
+### **Étape 1 : Télécharger les Fichiers**
+```bash
+# Cloner le repository
+git clone https://github.com/bouba02/Dashboard-CA-Rentabilite.git
+
+# Ou télécharger le ZIP
+# → Code > Download ZIP
+```
+
+### **Étape 2 : Ouvrir Excel**
+
+1. Ouvrir `Excel/Pilotage_Financier_Ngroup.xlsx`
+2. Vérifier les 5 onglets (Parametres, Ventes, Depenses, Cash_Flow, Dashboard_Excel)
+3. ✅ Les formules sont déjà configurées
+
+### **Étape 3 : Ouvrir Power BI**
+
+1. Lancer **Power BI Desktop**
+2. Ouvrir `PowerBI/Dashboard_CA_Rentabilite.pbix`
+3. Les données sont déjà importées et le dashboard prêt ✅
+
+### **Étape 4 : Explorer le Dashboard**
+
+- Utiliser les filtres **Année** et **Mois**
+- Cliquer sur les graphiques (drill-down)
+- Observer les alertes conditionnelles
+
+---
+
+## 🔄 Adapter à Vos Données
+
+### **Option 1 : Remplacer les Données Excel**
+```
+1. Ouvrir Template_Vierge.xlsx
+2. Remplir onglet VENTES avec vos factures
+3. Remplir onglet DEPENSES avec vos coûts
+4. Importer dans Power BI
+5. Rafraîchir (Actualiser)
+```
+
+### **Option 2 : Connecter à Votre Base de Données**
+```
+Power BI Desktop
+→ Accueil
+→ Obtenir des données
+→ MySQL / SQL Server / PostgreSQL
+→ Entrer connexion
+→ Sélectionner tables
+→ Charger
+```
+
+### **Option 3 : Intégration API**
+```
+Power Query M
+→ Connexion API REST
+→ Transformation JSON
+→ Chargement automatique
+```
+
+---
+
+## 📖 Documentation Complémentaire
+
+| Document | Description | Lien |
+|----------|-------------|------|
+| **Guide Complet** | 20 pages, étape par étape | [PDF](Documentation/Guide_Complet.pdf) |
+| **Formules DAX** | 9 mesures documentées | [TXT](Documentation/Formules_DAX.txt) |
+| **Analyses Business** | Insights détaillés | [MD](Documentation/Analyses_Business.md) |
+
+---
+
+## 🎓 Compétences Développées
+
+### **Data Analytics**
+
+✅ Structuration données financières  
+✅ Modélisation relationnelle (Star Schema)  
+✅ ETL (Extract, Transform, Load)  
+✅ Calculs DAX avancés (CALCULATE, DIVIDE, SWITCH, VAR)  
+
+### **Business Intelligence**
+
+✅ KPIs financiers (CA, Marges, Coûts)  
+✅ Alertes automatiques conditionnelles  
+✅ Data visualization (Waterfall, KPI cards, trends)  
+✅ Storytelling data (comparaison mois, insights actionnables)  
+
+### **Business Acumen**
+
+✅ Analyse P&L (Profit & Loss)  
+✅ Identification problèmes rentabilité  
+✅ Recommandations stratégiques basées data  
+✅ Pilotage financier opérationnel  
+
+---
+
+## 🎯 Cas d'Usage du Projet
+
+### **Portfolio Data Analyst**
+
+- ✅ Projet complet de bout en bout
+- ✅ Démonstration compétences Excel + Power BI
+- ✅ Business case réel avec impact mesurable
+- ✅ GitHub repository documenté
+
+### **Entretiens Recrutement**
+
+**Questions possibles :**
+
+*"Présentez-moi un projet data que vous avez réalisé."*
+
+→ Dashboard CA vs Rentabilité :
+- 24 mois de données financières (233 lignes)
+- 9 mesures DAX avec alertes automatiques
+- Identification d'un mois déficitaire (-7.8K en Juillet)
+- Cause identifiée : campagne marketing non-rentable (40K investis, 48K CA)
+- Décision business : arrêt campagne, ROI négatif prouvé
+
+### **Freelance / Consulting**
+
+- ✅ Template réutilisable pour clients
+- ✅ Personnalisation rapide (Excel + Power BI)
+- ✅ Livrable professionnel immédiat
+- ✅ Formation client incluse (vidéo)
+
+### **Entrepreneuriat**
+
+- ✅ Piloter votre propre business
+- ✅ Suivre rentabilité mois par mois
+- ✅ Détecter problèmes avant crise
+- ✅ Prendre décisions éclairées
+
+---
+
+## 📊 Roadmap & Évolutions Futures
+
+### **Version Actuelle : v1.0** ✅
+
+- [x] Dashboard CA vs Rentabilité
+- [x] 24 mois données réelles
+- [x] 9 mesures DAX
+- [x] Alertes conditionnelles
+- [x] Graphique Waterfall
+- [x] Documentation complète
+
+### **Version 2.0 (Q2 2025)** 🚧
+
+- [ ] Cash Flow Management (Thème 3)
+- [ ] Prévisions ML (Prophet / ARIMA)
+- [ ] Intégration API comptabilité (Sage, Zoho)
+- [ ] Dashboard mobile (Power BI Service)
+- [ ] Alertes email automatiques
+
+### **Version 3.0 (Q3 2025)** 💡
+
+- [ ] Comparaisons sectorielles (benchmarks)
+- [ ] Analyse prédictive rentabilité
+- [ ] Recommandations IA (GPT-4)
+- [ ] Export automatique PDF mensuel
+- [ ] Intégration Slack/Teams (notifications)
+
+---
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues ! 🎉
+
+### **Comment Contribuer ?**
+
+1. **Fork** le projet
+2. Créer une **branche** (`git checkout -b feature/AmazingFeature`)
+3. **Commit** vos changements (`git commit -m 'Add AmazingFeature'`)
+4. **Push** vers la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrir une **Pull Request**
+
+### **Idées de Contributions**
+
+- 📊 Nouveaux graphiques (Gantt, Heatmap, Sankey)
+- 🔔 Alertes additionnelles (Cash flow, ROI, CAC)
+- 🌍 Traductions (EN, AR, ES)
+- 📱 Version mobile optimisée
+- 🤖 Scripts Python (automatisation)
+
+---
+
+## 📞 Contact & Support
+
+### **Créateur du Projet**
+
+**Boubacar Nikiema**  
+Data Analyst | Business Intelligence Expert
+
+- 🌐 **Site** : [data.ngroupmediadigital.com](https://data.ngroupmediadigital.com)
+- 📧 **Email** : nikiemaboubacar@gmail.com
+- 💼 **LinkedIn** : [linkedin.com/in/boubacar-nikiema](https://linkedin.com/in/boubacar-nikiema)
+- 🎥 **YouTube** : [@BoubacarDataAnalyst](https://youtube.com/@BoubacarDataAnalyst)
+- 🐙 **GitHub** : [@bouba02](https://github.com/bouba02)
+
+### **Besoin d'Aide ?**
+
+- 💬 **Issues GitHub** : [Ouvrir une issue](https://github.com/bouba02/Dashboard-CA-Rentabilite/issues)
+- 📺 **Vidéo complète** : [YouTube (43 min)](https://youtu.be/VOTRE_LIEN)
+- 📧 **Email direct** : nikiemaboubacar@gmail.com
+
+**Temps de réponse moyen :** 24-48h
+
+---
+
+## 🎁 Projets Complémentaires
+
+Ce projet fait partie d'une **série de 3 dashboards business** :
+
+| Thème | Status | Repository |
+|-------|--------|------------|
+| **1. CA vs Rentabilité** | ✅ Disponible | [Ce projet](https://github.com/bouba02/Dashboard-CA-Rentabilite) |
+| **2. Valorisation Entreprise** | 🚧 Prochainement | [GitHub](https://github.com/bouba02/Valorisation-Entreprise) |
+| **3. Cash Flow Management** | 💡 Planifié Q2 2025 | - |
+
+**⭐ Suivez le repository pour être notifié des nouveaux projets !**
+
+---
+
+## 📜 Licence
+
+Ce projet est sous licence **MIT** - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+### **Vous êtes libre de :**
+
+✅ Utiliser le projet pour un usage personnel  
+✅ Utiliser le projet pour un usage commercial  
+✅ Modifier le code/fichiers  
+✅ Distribuer le projet  
+
+### **Conditions :**
+
+- Mentionner l'auteur original (Boubacar Nikiema)
+- Inclure la licence MIT dans toute copie
+
+---
+
+## 🙏 Remerciements
+
+- 🎥 **Communauté YouTube** pour le soutien et les retours
+- 💼 **Microsoft** pour Power BI Desktop (gratuit)
+- 📊 **DAX Guide** pour la documentation DAX
+- 🌍 **Open Source Community** pour l'inspiration
+
+---
+
+## ⭐ Si Ce Projet Vous Aide
+
+- **⭐ Star** ce repository
+- **🔗 Partagez** avec vos collègues data/entrepreneurs
+- **💬 Commentez** vos résultats sur YouTube
+- **📧 Contactez-moi** pour des projets freelance
+
+---
+
+## 📈 Statistiques du Projet
+
+![GitHub stars](https://img.shields.io/github/stars/bouba02/Dashboard-CA-Rentabilite?style=social)
+![GitHub forks](https://img.shields.io/github/forks/bouba02/Dashboard-CA-Rentabilite?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/bouba02/Dashboard-CA-Rentabilite?style=social)
+
+![GitHub issues](https://img.shields.io/github/issues/bouba02/Dashboard-CA-Rentabilite)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/bouba02/Dashboard-CA-Rentabilite)
+![GitHub last commit](https://img.shields.io/github/last-commit/bouba02/Dashboard-CA-Rentabilite)
+
+---
+
+**Made with ❤️ & ☕ by Boubacar Nikiema**  
+*© 2025 Ngroup Media & Digital - Tous droits réservés*
+
+---
+
+**🚀 Prêt à maîtriser votre rentabilité ? Téléchargez les fichiers et commencez maintenant !**
+
+[⬇️ Download ZIP](https://github.com/bouba02/Dashboard-CA-Rentabilite/archive/refs/heads/main.zip) | [⭐ Star this repo](https://github.com/bouba02/Dashboard-CA-Rentabilite) | [📺 Watch Tutorial](https://youtu.be/VOTRE_LIEN)
