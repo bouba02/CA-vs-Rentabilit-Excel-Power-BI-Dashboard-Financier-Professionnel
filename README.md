@@ -38,7 +38,7 @@ Ce projet démontre comment construire un système complet de pilotage financier
 | **CA Total** | 2 079 000 MAD | ✅ |
 | **Bénéfice Net** | 1 590 717 MAD | ✅ |
 | **Marge Nette Moyenne** | 76.5% | ⭐ Excellent |
-| **Coûts Variables** | 71 380 MAD | 🟢 Sous contrôle |
+| **Coûts Variables** | 109 083 MAD | 🟢 Sous contrôle |
 | **Coûts Fixes** | 379 200 MAD | 🟢 Maîtrisés |
 
 ### **Cas d'Étude : Juillet 2024 (Mois Catastrophe)**
@@ -58,7 +58,7 @@ Ce projet démontre comment construire un système complet de pilotage financier
 
 ## 🎥 Vidéo Tutoriel Complète
 
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/VOTRE_LIEN_VIDEO)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/AUYo3agdDWY)
 
 **Durée :** 43 minutes | **Langue :** Français
 
@@ -83,19 +83,13 @@ Dashboard-CA-Rentabilite/
 ├── 📄 README.md                               (Ce fichier)
 ├── 📊 Excel/
 │   ├── Pilotage_Financier_Ngroup.xlsx         (Fichier source complet)
-│   └── Template_Vierge.xlsx                   (Template réutilisable)
 ├── 📈 PowerBI/
 │   ├── Dashboard_CA_Rentabilite.pbix          (Dashboard complet)
-│   └── Dashboard_Template.pbix                (Template vierge)
 ├── 📚 Documentation/
 │   ├── Guide_Complet.pdf                      (Guide étape par étape)
 │   ├── Formules_DAX.txt                       (9 mesures documentées)
 │   └── Analyses_Business.md                   (Insights détaillés)
-├── 🖼️ Assets/
-│   ├── dashboard-preview.png                  (Capture dashboard)
-│   ├── waterfall-chart.png                    (Graphique cascade)
-│   └── kpi-cards.png                          (Cartes indicateurs)
-└── 📜 LICENSE                                 (MIT)
+├── Dashboard_CA_vs_Rentabilité.png            (Capture dashboard)
 ```
 
 ---
@@ -234,8 +228,6 @@ SWITCH(
 
 ### **1. Cartes KPI (4 indicateurs)**
 
-![KPI Cards](assets/kpi-cards.png)
-
 - **CA Total** : 2 079 000 MAD (Bleu #4472C4)
 - **Marge Brute %** : 96.6% (Orange #EB601B)
 - **Bénéfice Net** : 1 590 717 MAD (Vert #70AD47)
@@ -252,22 +244,16 @@ SWITCH(
 - **Axe Y** : CA Total, Bénéfice Net
 - **Insight** : Visualise la croissance et détecte Juillet 2024 (chute)
 
-### **4. Graphique Waterfall (Cascade Financière)**
+### **4. Graphique Entennoir**
 
-![Waterfall Chart](assets/waterfall-chart.png)
+![Entennoir Chart](entennoir-chart.png)
 
-**Cascade du CA au Bénéfice :**
-```
-CA Total : 2 079 000 MAD
-    ↓ (-71 380)
-Marge Brute : 2 007 620 MAD
-    ↓ (-379 200)
-Bénéfice Net : 1 590 717 MAD
-```
 
 **Couleurs :**
-- Vert : Gains (CA, Marge Brute)
+- Verte : Gains (Benefice Net)
 - Rouge : Pertes (Coûts Variables, Coûts Fixes)
+- Orange : Gains avant déduction de toutes les dépenses
+- Bleue : Gains ( Chiffre d'affaire total )
 
 ### **5. Analyse par Service (Barres horizontales)**
 
@@ -360,7 +346,7 @@ Bénéfice Net : 1 590 717 MAD
 
 ---
 
-## 🚀 Installation & Utilisation
+##  Installation & Utilisation
 
 ### **Prérequis**
 ```
@@ -381,7 +367,7 @@ git clone https://github.com/bouba02/Dashboard-CA-Rentabilite.git
 
 ### **Étape 2 : Ouvrir Excel**
 
-1. Ouvrir `Excel/Pilotage_Financier_Ngroup.xlsx`
+1. Ouvrir `Pilotage_Financier_Ngroup.xlsx`
 2. Vérifier les 5 onglets (Parametres, Ventes, Depenses, Cash_Flow, Dashboard_Excel)
 3. ✅ Les formules sont déjà configurées
 
@@ -403,7 +389,7 @@ git clone https://github.com/bouba02/Dashboard-CA-Rentabilite.git
 
 ### **Option 1 : Remplacer les Données Excel**
 ```
-1. Ouvrir Template_Vierge.xlsx
+1. Ouvrir Pilotage_Financier_Ngroup.xlsx
 2. Remplir onglet VENTES avec vos factures
 3. Remplir onglet DEPENSES avec vos coûts
 4. Importer dans Power BI
@@ -441,7 +427,7 @@ Power Query M
 
 ---
 
-## 🎓 Compétences Développées
+## Compétences Développées
 
 ### **Data Analytics**
 
@@ -466,7 +452,7 @@ Power Query M
 
 ---
 
-## 🎯 Cas d'Usage du Projet
+##  Cas d'Usage du Projet
 
 ### **Portfolio Data Analyst**
 
@@ -475,18 +461,6 @@ Power Query M
 - ✅ Business case réel avec impact mesurable
 - ✅ GitHub repository documenté
 
-### **Entretiens Recrutement**
-
-**Questions possibles :**
-
-*"Présentez-moi un projet data que vous avez réalisé."*
-
-→ Dashboard CA vs Rentabilité :
-- 24 mois de données financières (233 lignes)
-- 9 mesures DAX avec alertes automatiques
-- Identification d'un mois déficitaire (-7.8K en Juillet)
-- Cause identifiée : campagne marketing non-rentable (40K investis, 48K CA)
-- Décision business : arrêt campagne, ROI négatif prouvé
 
 ### **Freelance / Consulting**
 
@@ -504,34 +478,6 @@ Power Query M
 
 ---
 
-## 📊 Roadmap & Évolutions Futures
-
-### **Version Actuelle : v1.0** ✅
-
-- [x] Dashboard CA vs Rentabilité
-- [x] 24 mois données réelles
-- [x] 9 mesures DAX
-- [x] Alertes conditionnelles
-- [x] Graphique Waterfall
-- [x] Documentation complète
-
-### **Version 2.0 (Q2 2025)** 🚧
-
-- [ ] Cash Flow Management (Thème 3)
-- [ ] Prévisions ML (Prophet / ARIMA)
-- [ ] Intégration API comptabilité (Sage, Zoho)
-- [ ] Dashboard mobile (Power BI Service)
-- [ ] Alertes email automatiques
-
-### **Version 3.0 (Q3 2025)** 💡
-
-- [ ] Comparaisons sectorielles (benchmarks)
-- [ ] Analyse prédictive rentabilité
-- [ ] Recommandations IA (GPT-4)
-- [ ] Export automatique PDF mensuel
-- [ ] Intégration Slack/Teams (notifications)
-
----
 
 ## 🤝 Contribution
 
@@ -550,7 +496,6 @@ Les contributions sont les bienvenues ! 🎉
 - 📊 Nouveaux graphiques (Gantt, Heatmap, Sankey)
 - 🔔 Alertes additionnelles (Cash flow, ROI, CAC)
 - 🌍 Traductions (EN, AR, ES)
-- 📱 Version mobile optimisée
 - 🤖 Scripts Python (automatisation)
 
 ---
@@ -571,30 +516,12 @@ Data Analyst | Business Intelligence Expert
 ### **Besoin d'Aide ?**
 
 - 💬 **Issues GitHub** : [Ouvrir une issue](https://github.com/bouba02/Dashboard-CA-Rentabilite/issues)
-- 📺 **Vidéo complète** : [YouTube (43 min)](https://youtu.be/VOTRE_LIEN)
+- 📺 **Vidéo complète** : [YouTube (43 min)](https://youtu.be/AUYo3agdDWY)
 - 📧 **Email direct** : nikiemaboubacar@gmail.com
 
 **Temps de réponse moyen :** 24-48h
 
 ---
-
-## 🎁 Projets Complémentaires
-
-Ce projet fait partie d'une **série de 3 dashboards business** :
-
-| Thème | Status | Repository |
-|-------|--------|------------|
-| **1. CA vs Rentabilité** | ✅ Disponible | [Ce projet](https://github.com/bouba02/Dashboard-CA-Rentabilite) |
-| **2. Valorisation Entreprise** | 🚧 Prochainement | [GitHub](https://github.com/bouba02/Valorisation-Entreprise) |
-| **3. Cash Flow Management** | 💡 Planifié Q2 2025 | - |
-
-**⭐ Suivez le repository pour être notifié des nouveaux projets !**
-
----
-
-## 📜 Licence
-
-Ce projet est sous licence **MIT** - voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
 ### **Vous êtes libre de :**
 
@@ -640,11 +567,11 @@ Ce projet est sous licence **MIT** - voir le fichier [LICENSE](LICENSE) pour plu
 
 ---
 
-**Made with ❤️ & ☕ by Boubacar Nikiema**  
+**Made with ❤️  by Boubacar Nikiema**  
 *© 2025 Ngroup Media & Digital - Tous droits réservés*
 
 ---
 
-**🚀 Prêt à maîtriser votre rentabilité ? Téléchargez les fichiers et commencez maintenant !**
+**Prêt à maîtriser votre rentabilité ? Téléchargez les fichiers et commencez maintenant !**
 
-[⬇️ Download ZIP](https://github.com/bouba02/Dashboard-CA-Rentabilite/archive/refs/heads/main.zip) | [⭐ Star this repo](https://github.com/bouba02/Dashboard-CA-Rentabilite) | [📺 Watch Tutorial](https://youtu.be/VOTRE_LIEN)
+[⬇️ Download ZIP](https://github.com/bouba02/Dashboard-CA-Rentabilite/archive/refs/heads/main.zip) | [⭐ Star this repo](https://github.com/bouba02/Dashboard-CA-Rentabilite) | [📺 Watch Tutorial](https://youtu.be/AUYo3agdDWY)
