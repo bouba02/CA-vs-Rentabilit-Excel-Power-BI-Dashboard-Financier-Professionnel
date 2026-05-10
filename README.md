@@ -3,7 +3,7 @@
 > **40% of entrepreneurs generate revenue but don't make money.**  
 > 24 months · 233 rows · 9 DAX measures · Automatic alerts · 43-min YouTube tutorial
 
-![Dashboard Preview](Dashboard_CA_vs_Rentabilité.png)
+![Dashboard Preview](Dashboard_CA_vs_Rentabilité.png)
 
 🇫🇷 [Version française disponible ici](README_FR.md)
 
