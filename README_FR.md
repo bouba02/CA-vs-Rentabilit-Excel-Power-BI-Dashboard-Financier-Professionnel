@@ -3,7 +3,7 @@
 > **40% des entrepreneurs font du CA mais ne gagnent pas d'argent.**  
 > 24 mois · 233 lignes · 9 mesures DAX · Alertes automatiques · Tutoriel YouTube 43 min
 
-![Dashboard Preview](Dashboard_CA_vs_Rentabilité.png)
+![Dashboard Preview](Dashboard_CA_vs_Rentabilité.png)
 
 🇬🇧 [English version available here](README.md)
 
